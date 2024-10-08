@@ -4,9 +4,10 @@ This repo is a set of scripts needed to deploy an K8S cluster on homelab. The cl
 ##Background information
 I run this cluster on a refurbished HP Proliant ML350p Gen8 on which I have installed Ubuntu server 24.04.1 LTS. This server has the following description: HP Proliant ML 350p Gen8
 
-CPU - 2x E5-2670 @ 2.6 GHz (16 Cores)
-RAM - 128GB DDR3 ECC RAM (16x 8GB)
-Hard Drives - 2x 900GB 10K SAS Drives
+- CPU - 2x E5-2670 @ 2.6 GHz (16 Cores)
+- RAM - 128GB DDR3 ECC RAM (16x 8GB)
+- Hard Drives - 2x 900GB 10K SAS Drives
+- 
 This does not mean that the script won't run on anything else, but it has been deployed on that environment.
 
 ## Objective
