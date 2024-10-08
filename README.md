@@ -1,4 +1,4 @@
-#Homelab-OKD
+# Homelab-OKD
 This repo is a set of scripts needed to deploy an K8S cluster on homelab. The cluster will be composed of 3 Virtualbox VMs.
 
 ##Background information
@@ -9,24 +9,24 @@ RAM - 128GB DDR3 ECC RAM (16x 8GB)
 Hard Drives - 2x 900GB 10K SAS Drives
 This does not mean that the script won't run on anything else, but it has been deployed on that environment.
 
-##Objective
+## Objective
 The goal of this scripts is to automate the deployment of 3 VM such that one will be the K8S Master while the other two will be used as workers.
 
 I'm sure this has been done many times. I just want to play with it and share my experience through this journey. And if it helps someone, then Yeah! :)
 
-##Prerequesite Before being able to build the cluster, we need to validate some items are present on the host.
+## Prerequesite Before being able to build the cluster, we need to validate some items are present on the host.
 
 The host OS is Ubuntuserver 24.04.1 LTS
 VirtualBox: 7.0.16
 Vagrant: 2.4.1-1
 Once again, I write the version number here because this is what I have tested but it will likely work with other permutation of versions.
 
-#The scripts
+# The scripts
 In my few tryal and errors, I've ended up using 3 scripts (so far). Is it the best way to do it? Meh! It's never going to prod and it works for me. 
 
 The first script id a Vagrantfile that allocates 3 VMs. The first one is named KubeMaster and the other 2 are named KubeWorker1 and 2.
 
-#Vagrantfile
+# Vagrantfile
 The content of my Vagrantfile goes like this (note: comments are in french for now. I might eventually ask Chatgpt to translate them to english eventually.
 ```
 Vagrant.configure("2") do |config|
@@ -75,7 +75,7 @@ Vagrant.configure("2") do |config|
   
 ```
 
-#The master_install.sh script
+# The master_install.sh script
 Once KubeMaster is created, master_install.sh is invoked.
 ```
 #!/bin/bash
